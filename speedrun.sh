@@ -12,8 +12,8 @@
 
 # Default intermediate artifacts directory is in ~/.cache/vibechat
 export OMP_NUM_THREADS=1
-NANOCHAT_BASE_DIR="$HOME/.cache/vibechat"
-mkdir -p $NANOCHAT_BASE_DIR
+VIBECHAT_BASE_DIR="$HOME/.cache/vibechat"
+mkdir -p $VIBECHAT_BASE_DIR
 
 # -----------------------------------------------------------------------------
 # Python venv setup with uv
@@ -75,11 +75,11 @@ python -m scripts.tok_eval
 
 # Download the eval_bundle from s3 to evaluate CORE metric during training (~162MB)
 EVAL_BUNDLE_URL=https://karpathy-public.s3.us-west-2.amazonaws.com/eval_bundle.zip
-if [ ! -d "$NANOCHAT_BASE_DIR/eval_bundle" ]; then
+if [ ! -d "$VIBECHAT_BASE_DIR/eval_bundle" ]; then
     curl -L -o eval_bundle.zip $EVAL_BUNDLE_URL
     unzip -q eval_bundle.zip
     rm eval_bundle.zip
-    mv eval_bundle $NANOCHAT_BASE_DIR
+    mv eval_bundle $VIBECHAT_BASE_DIR
 fi
 
 # The d20 model is 561M parameters.
