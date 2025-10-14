@@ -109,18 +109,6 @@ I haven't invested too much here but some tests exist, especially for the tokeni
 python -m pytest tests/test_rustbpe.py -v -s
 ```
 
-## Contributing
-
-vibechat is nowhere finished. The goal is to improve the state of the art in micro models that are accessible to work with end to end on budgets of < $1000 dollars. Accessibility is about overall cost but also about cognitive complexity - vibechat is not an exhaustively configurable LLM "framework"; there will be no giant configuration objects, model factories, or if-then-else monsters in the code base. It is a single, cohesive, minimal, readable, hackable, maximally-forkable "strong baseline" codebase designed to run start to end and produce a concrete ChatGPT clone and its report card.
-
-## Acknowledgements
-
-- The name (vibechat) derives from my earlier project [nanoGPT](https://github.com/ttracx/nanoGPT), which only covered pretraining.
-- vibechat is also inspired by [modded-nanoGPT](https://github.com/KellerJordan/modded-nanogpt), which gamified the nanoGPT repo with clear metrics and a leaderboard, and borrows a lot of its ideas and some implementation for pretraining.
-- Thank you to [HuggingFace](https://huggingface.co/) for fineweb and smoltalk.
-- Thank you [Lambda](https://lambda.ai/service/gpu-cloud) for the compute used in developing this project.
-- Thank you to chief LLM whisperer 🧙‍♂️ Alec Radford for advice/guidance.
-
 ## Cite
 
 If you find vibechat helpful in your research cite simply as:
@@ -134,7 +122,3 @@ If you find vibechat helpful in your research cite simply as:
   url = {https://github.com/ttracx/vibechat}
 }
 ```
-
-## License
-
-MIT
