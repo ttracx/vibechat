@@ -25,7 +25,7 @@ from vibechat.checkpoint_manager import load_model
 from vibechat.core_eval import evaluate_task
 
 # -----------------------------------------------------------------------------
-# nanoChat specific function dealing with I/O etc.
+# vibechat specific function dealing with I/O etc.
 
 def evaluate_model(model, tokenizer, device, max_per_task=-1):
     """
