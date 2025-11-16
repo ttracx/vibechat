@@ -20,7 +20,7 @@ from vibechat.common import compute_init
 from vibechat.checkpoint_manager import load_model
 from vibechat.engine import Engine
 
-parser = argparse.ArgumentParser(description='NanoChat Web Server')
+parser = argparse.ArgumentParser(description='vibechat Web Server')
 parser.add_argument('-i', '--source', type=str, default="sft", help="Source of the model: sft|mid|rl")
 parser.add_argument('-t', '--temperature', type=float, default=0.8, help='Default temperature for generation')
 parser.add_argument('-k', '--top-k', type=int, default=50, help='Default top-k sampling parameter')
@@ -80,7 +80,7 @@ async def root():
 
 @app.get("/logo.svg")
 async def logo():
-    """Serve the NanoChat logo for favicon and header."""
+    """Serve the vibechat logo for favicon and header."""
     logo_path = os.path.join("vibechat", "logo.svg")
     return FileResponse(logo_path, media_type="image/svg+xml")
 
@@ -193,6 +193,6 @@ async def health():
 
 if __name__ == "__main__":
     import uvicorn
-    print(f"Starting NanoChat Web Server")
+    print(f"Starting vibechat Web Server")
     print(f"Temperature: {args.temperature}, Top-k: {args.top_k}, Max tokens: {args.max_tokens}")
     uvicorn.run(app, host=args.host, port=args.port)
